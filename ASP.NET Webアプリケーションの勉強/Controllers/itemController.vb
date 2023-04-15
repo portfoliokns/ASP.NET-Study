@@ -15,6 +15,7 @@ Namespace Controllers
         Private db As New db_SystemEntities
 
         ' GET: item
+
         Function Index() As ActionResult
             Return View(db.t_item.ToList())
         End Function

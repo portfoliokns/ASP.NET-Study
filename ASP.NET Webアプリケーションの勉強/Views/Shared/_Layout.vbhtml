@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li>@Html.ActionLink("ホーム", "Index", "Home", New With { .area = "" }, New With { .class = "nav-link" })</li>
-                    <li>@Html.ActionLink("詳細", "About", "Home", New With { .area = "" }, New With { .class = "nav-link" })</li>
+                    <li>@Html.ActionLink("商品", "Index", "item", New With {.area = ""}, New With {.class = "nav-link"})</li>
                     <li>@Html.ActionLink("問い合わせ", "Contact", "Home", New With { .area = "" }, New With { .class = "nav-link" })</li>
                 </ul>
             </div>
