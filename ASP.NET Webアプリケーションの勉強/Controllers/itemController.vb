@@ -6,6 +6,7 @@ Imports System.Linq
 Imports System.Net
 Imports System.Web
 Imports System.Web.Mvc
+Imports System.Web.Services.Description
 Imports ASP.NET_Webアプリケーションの勉強
 
 Namespace Controllers
@@ -13,10 +14,11 @@ Namespace Controllers
         Inherits System.Web.Mvc.Controller
 
         Private db As New db_SystemEntities
-
+        Private japanese As New My.Resources.Japanese
         ' GET: item
 
         Function Index() As ActionResult
+            ViewBag.japanese = japanese
             Return View(db.t_item.ToList())
         End Function
 
@@ -29,11 +31,13 @@ Namespace Controllers
             If IsNothing(t_item) Then
                 Return HttpNotFound()
             End If
+            ViewBag.japanese = japanese
             Return View(t_item)
         End Function
 
         ' GET: item/Create
         Function Create() As ActionResult
+            ViewBag.japanese = japanese
             Return View()
         End Function
 
@@ -60,6 +64,7 @@ Namespace Controllers
             If IsNothing(t_item) Then
                 Return HttpNotFound()
             End If
+            ViewBag.japanese = japanese
             Return View(t_item)
         End Function
 
@@ -86,6 +91,7 @@ Namespace Controllers
             If IsNothing(t_item) Then
                 Return HttpNotFound()
             End If
+            ViewBag.japanese = japanese
             Return View(t_item)
         End Function
 
