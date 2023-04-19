@@ -65,6 +65,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  商品ID に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Public Shared ReadOnly Property item_id() As String
+            Get
+                Return ResourceManager.GetString("item_id", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  商品名 に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Public Shared ReadOnly Property item_name() As String
