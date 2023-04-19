@@ -3,14 +3,14 @@
     ViewData("Title") = "Details"
 End Code
 
-<h2>Details</h2>
+<h2>商品詳細ページ</h2>
 
 <div>
-    <h4>t_item</h4>
+    <h4>商品詳細</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(Function(model) model.ItemName)
+            @ViewBag.japanese.item_name
         </dt>
 
         <dd>
@@ -18,7 +18,7 @@ End Code
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(Function(model) model.RegistrationDate)
+            @ViewBag.japanese.registration_date
         </dt>
 
         <dd>
@@ -28,6 +28,6 @@ End Code
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", New With { .id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("編集", "Edit", New With {.id = Model.Id}) |
+    @Html.ActionLink("戻る", "Index")
 </p>

@@ -31,6 +31,7 @@ Namespace Controllers
             If IsNothing(t_item) Then
                 Return HttpNotFound()
             End If
+            ViewBag.japanese = japanese
             Return View(t_item)
         End Function
 
