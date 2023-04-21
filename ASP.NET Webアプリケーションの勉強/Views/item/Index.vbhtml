@@ -3,7 +3,7 @@
     ViewData("Title") = "index"
 End Code
 
-<h2>商品一覧</h2>
+<h2>商品一覧(デプロイ後)</h2>
 
 <p>
     @Html.ActionLink("新規追加", "Create")
